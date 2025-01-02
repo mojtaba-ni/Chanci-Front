@@ -1,4 +1,4 @@
-import Land from "@/app/widget/Home/Land";
+import Land from "@/widget/Home/Land";
 import React from "react";
 
 const Home = () => {
