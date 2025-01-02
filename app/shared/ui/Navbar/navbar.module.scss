@@ -1,0 +1,29 @@
+.wrapper {
+  padding: 1rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .navList {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    list-style: none;
+  }
+  .btnGroup {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    .btnLogin {
+      border-radius: 1px;
+      color: #4752f3;
+      background-color: #fff;
+    }
+    .btnGet {
+      border-radius: 1px;
+      color: #fff;
+      background: linear-gradient(to right, #8e15ba, #5175f0);
+    }
+  }
+}
