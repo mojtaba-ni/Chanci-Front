@@ -18,3 +18,18 @@
     height: 48px;
   }
 }
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 0.5rem 1rem;
+    height: unset;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    .btn {
+      margin: 1rem 0;
+      background-color: #4752f3;
+      border-radius: 16px;
+      height: 38px;
+      min-width: 290px;
+    }
+  }
+}
