@@ -41,14 +41,14 @@ body {
 
 /* Links */
 a {
-  color: var(--primary);
+  /* color: var(--primary); */
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
-a:hover {
+/* a:hover {
   color: var(--accent);
-}
+} */
 
 /* Images */
 img {
