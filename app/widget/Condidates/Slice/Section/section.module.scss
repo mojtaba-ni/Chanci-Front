@@ -1,0 +1,29 @@
+.wrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  .rightEllipse {
+    position: absolute;
+    right: 240px;
+    top: -140px;
+  }
+  .sectionBox {
+    transform: translateY(-90px);
+    z-index: 1;
+    position: relative;
+    .sectionRes {
+      display: none;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .sectionBox {
+    .section {
+      display: none !important;
+    }
+    .sectionRes {
+      display: flex !important;
+    }
+  }
+}
