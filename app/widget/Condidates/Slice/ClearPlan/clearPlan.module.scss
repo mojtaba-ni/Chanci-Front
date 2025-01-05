@@ -90,6 +90,13 @@
     .cardSLine {
       display: none !important;
     }
+    .cardLine {
+      position: absolute;
+      right: 20px !important;
+      left: unset !important;
+      top: 65px;
+      width: 120px;
+    }
     .cardSpanPart {
       max-width: 190px;
       display: flex;
