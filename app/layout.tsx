@@ -3,6 +3,8 @@ import { Geist_Mono } from "next/font/google";
 import { MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
 import "./globals.css";
+import Header from "./shared/ui/Header/header";
+import Footer from "./shared/ui/Footer/footer";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -22,7 +24,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={geistMono.variable}>
-        <MantineProvider>{children}</MantineProvider>
+        <MantineProvider>
+          <Header />
+          {children}
+          <Footer />
+        </MantineProvider>
       </body>
     </html>
   );
