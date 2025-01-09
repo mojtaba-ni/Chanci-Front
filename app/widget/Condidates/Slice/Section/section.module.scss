@@ -12,6 +12,9 @@
     transform: translateY(-90px);
     z-index: 1;
     position: relative;
+    .section {
+      max-width: 1250px;
+    }
     .sectionRes {
       display: none;
     }

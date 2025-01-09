@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import styles from "./journey.module.scss";
 import journey from "@public/image/file/invest.png";
+import { Button } from "@mantine/core";
 
 const Journey = () => {
   return (
@@ -46,7 +47,18 @@ const Journey = () => {
             </p>
           </div>
         </div>
-        <button className={styles.button}>
+        <Button
+          size="lg"
+          variant="gradient"
+          gradient={{ from: "grape", to: "indigo", deg: 90 }}
+          style={{
+            width: "260px",
+            borderRadius: "16px",
+            gap: "1rem",
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
           Book a free Consult
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -58,11 +70,12 @@ const Journey = () => {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
+            style={{ marginLeft: "1rem" }}
           >
             <path d="M5 12h14" />
             <path d="m12 5 7 7-7 7" />
           </svg>
-        </button>
+        </Button>
       </div>
     </div>
   );
