@@ -4,6 +4,7 @@ import Image from "next/image";
 import righRoom1 from "@public/image/file/righRoom.png";
 import righRoom2 from "@public/image/file/righRoom2.png";
 import styles from "./rightRoom.module.scss";
+import { Button } from "@mantine/core";
 
 const RightRoom = () => {
   return (
@@ -18,7 +19,18 @@ const RightRoom = () => {
             Become part of the NGN network to access exclusive offers and expand
             your company's opportunities.
           </p>
-          <button className={styles.button}>
+          <Button
+            size="lg"
+            variant="gradient"
+            gradient={{ from: "grape", to: "indigo", deg: 90 }}
+            style={{
+              width: "300px",
+              borderRadius: "16px",
+              gap: "1rem",
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
             Explore Upcoming Events
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -30,11 +42,12 @@ const RightRoom = () => {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
+              style={{ marginLeft: "1rem" }}
             >
               <path d="M5 12h14" />
               <path d="m12 5 7 7-7 7" />
             </svg>
-          </button>
+          </Button>
         </div>
         <div className={styles.rightSection}>
           <div className={styles.imageTop}>
