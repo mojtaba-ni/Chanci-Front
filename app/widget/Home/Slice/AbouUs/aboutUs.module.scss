@@ -24,13 +24,31 @@
   gap: 2rem;
 }
 
-.card {
+.card,
+.cardR {
   display: flex;
   background: #3a3a3a;
   border-radius: 16px;
   overflow: hidden;
   min-height: 280px;
   padding: 2rem;
+  position: relative;
+  z-index: 1;
+  .EllipseCardL {
+    position: absolute;
+    z-index: 20;
+    left: 0;
+    top: 0;
+  }
+  .EllipseCardR {
+    position: absolute;
+    z-index: 20;
+    right: 0;
+    top: 0;
+  }
+  .EllipseRes {
+    display: none;
+  }
   .content {
     flex: 1;
     padding: 2.5rem;
@@ -53,6 +71,10 @@
     }
   }
 }
+.cardR {
+  display: flex;
+  flex-direction: row-reverse;
+}
 
 .tag {
   background-color: #0d131d;
@@ -62,9 +84,11 @@
   width: 180px;
   font-size: 20px;
   text-align: center;
+  z-index: 1000;
 }
 
-.card h3 {
+.card h3,
+.cardR h3 {
   color: #fff;
   font-size: 1.75rem;
   font-weight: 600;
@@ -72,8 +96,9 @@
   margin: 0;
 }
 
-.card p {
-  color: #9ca3af;
+.card p,
+.cardR p {
+  color: #ffffffad;
   line-height: 1.6;
   margin-bottom: 1rem;
 }
@@ -116,22 +141,61 @@
     margin: 2rem auto;
     padding: 0 1rem;
   }
-
+  .tag {
+    width: 140px;
+    padding: 0.4rem 1rem;
+    font-size: 18px;
+    z-index: 1000;
+  }
   .header h2 {
     font-size: 2rem;
   }
 
-  .card {
+  .card,
+  .cardR {
+    .EllipseCardL {
+      display: none !important;
+    }
+    .EllipseCardR {
+      display: none !important;
+    }
+    .EllipseRes {
+      display: flex;
+      position: absolute;
+      left: 0;
+      top: 200px;
+      z-index: 1;
+    }
+    display: flex;
+    flex-direction: column !important;
+    padding: 1.2rem !important;
     .content {
-      padding: 1.5rem;
+      padding: 1rem;
     }
 
     h3 {
       font-size: 1.5rem;
+      max-width: 280px;
+      line-height: 2rem;
+      z-index: 1000 !important;
     }
-
+    p {
+      z-index: 1000 !important;
+    }
     .imageWrapper {
       height: 250px;
+    }
+  }
+  .button {
+    padding: 0.4rem 0.8rem !important;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    gap: 0.7rem;
+    .cardArrow {
+      transform: translateY(2px);
     }
   }
 }

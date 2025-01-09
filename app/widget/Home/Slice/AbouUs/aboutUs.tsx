@@ -4,6 +4,10 @@ import Link from "next/link";
 import style from "./aboutUs.module.scss";
 import candidateImage from "@public/image/homeTalking.png";
 import employersImage from "@public/image/display.png";
+import EllipseCardL from "@public/image/widget/EllipseCardL.svg";
+import EllipseCardR from "@public/image/widget/EllipseCardR.svg";
+import EllipseResL from "@public/image/widget/EllipseResL.svg";
+import arrowRight from "@public/arrowRight.svg";
 
 const AboutUs = () => {
   return (
@@ -26,7 +30,20 @@ const AboutUs = () => {
 
       <div className={style.cards}>
         {/* Candidates Card */}
-        <div className={style.card}>
+        <div className={style.cardR}>
+          <div className={style.EllipseRes}>
+            <Image src={EllipseResL} alt="ellipse" />
+          </div>
+          <div className={style.EllipseCardL}>
+            <Image src={EllipseCardL} alt="ellipse" />
+          </div>
+          <div className={style.imageWrapper}>
+            <Image
+              src={candidateImage}
+              alt="Candidate with neon lights"
+              className={style.image}
+            />
+          </div>
           <div className={style.content}>
             <span className={style.tag}>Candidates</span>
             <h3>Your Career Journey, Reinvented</h3>
@@ -37,33 +54,23 @@ const AboutUs = () => {
             </p>
             <Link href="/boost-career" className={style.button}>
               Boost your career Now
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M5 12h14" />
-                <path d="m12 5 7 7-7 7" />
-              </svg>
+              <Image
+                className={style.cardArrow}
+                src={arrowRight}
+                alt="arrowRight"
+              />
             </Link>
-          </div>
-          <div className={style.imageWrapper}>
-            <Image
-              src={candidateImage}
-              alt="Candidate with neon lights"
-              className={style.image}
-            />
           </div>
         </div>
 
         {/* Employers Card */}
         <div className={style.card}>
+          <div className={style.EllipseRes}>
+            <Image src={EllipseResL} alt="ellipse" />
+          </div>
+          <div className={style.EllipseCardR}>
+            <Image src={EllipseCardR} alt="ellipse" />
+          </div>
           <div className={style.imageWrapper}>
             <Image
               src={employersImage}
@@ -80,20 +87,11 @@ const AboutUs = () => {
             </p>
             <Link href="/find-talent" className={style.button}>
               Find a Talent Today
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M5 12h14" />
-                <path d="m12 5 7 7-7 7" />
-              </svg>
+              <Image
+                className={style.cardArrow}
+                src={arrowRight}
+                alt="arrowRight"
+              />
             </Link>
           </div>
         </div>
